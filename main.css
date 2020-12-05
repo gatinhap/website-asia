@@ -1,0 +1,67 @@
+body {
+    margin: 0 auto;
+    max-width: 1400px;
+}
+
+.parent-container {
+    display: grid;
+    grid-template-columns: minmax(auto, 500px);
+    grid-template-rows: 100vh repeat(6, auto);
+    grid-template-areas:    "hero"
+                            "about"
+                            "experience"
+                            "offer"
+                            "services"
+                            "info"
+                            "cert";
+    margin: auto 10px;
+    box-sizing: border-box;
+    max-width: 500px;
+}
+
+.hero {
+    grid-area: hero;
+    background-image: url("images/hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+}
+
+.about {
+    grid-area: about;
+}
+
+.about__photo {
+    max-width: 500px;
+}
+
+.experience {
+    grid-area: experience;
+}
+
+.offer {
+    grid-area: offer;
+}
+
+.services {
+    grid-area: services;
+}
+
+.info {
+    grid-area: info;
+}
+
+.cert {
+    grid-area: cert;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+/* for desktop: flex-direction: row;*/
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+}
