@@ -1,11 +1,40 @@
+:root {
+    --primary-dark: #271c19;
+    --primary-light: #fef6e4;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0 auto;
     max-width: 1400px;
+    line-height: 1.5;
+    font-family: 'Lato', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.no-background {
+    background-color: transparent;
+}
+
+.add-background {
+    background-color: var(--primary-light);
+}
+
+.content-wrapper {
+    padding: 1em;
+    background-color: var(--primary-light);
 }
 
 .parent-container {
     display: grid;
-    grid-template-columns: minmax(auto, 500px);
+    grid-template-columns: 100%;
     grid-template-rows: 100vh repeat(6, auto);
     grid-template-areas:    "hero"
                             "about"
@@ -14,45 +43,61 @@ body {
                             "services"
                             "info"
                             "cert";
-    margin: auto 10px;
-    box-sizing: border-box;
-    max-width: 500px;
+    margin: 0;
+    width: 100%;
 }
 
 .hero {
     grid-area: hero;
+    padding: 1em;
     background-image: url("images/hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right;
+    line-height: 1.15;
+    color: var(--primary-dark);
 }
 
 .about {
     grid-area: about;
 }
 
+.add-padding {
+    padding: 2em;
+}
+
+.about__photo-wrapper {
+}
+
 .about__photo {
-    max-width: 500px;
+    width: 100%;
 }
 
 .experience {
     grid-area: experience;
+    padding: 1em;
+    color: var(--primary-dark);
 }
 
 .offer {
     grid-area: offer;
+    padding: 2em;
 }
 
-.services {
+.therapy-desc {
     grid-area: services;
+    padding: 1em;
+    color: var(--primary-dark);
 }
 
 .info {
     grid-area: info;
+    padding: 1em;
 }
 
 .cert {
     grid-area: cert;
+    padding: 1em;
 }
 
 .card-container {
@@ -64,4 +109,9 @@ body {
 .card {
     display: flex;
     flex-direction: column;
+    padding: 1em;
+}
+
+.card__text {
+    margin: 0;
 }
