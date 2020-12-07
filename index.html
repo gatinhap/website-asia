@@ -8,15 +8,21 @@
     <link rel="stylesheet" href="main.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <script src="script.js"></script>
 </head>
 <body>
-<main class="parent-container">
-    <section class="hero">
+<main class="grid-container">
+    <section class="hero" id="hero">
         <header>
             <h1>Psychoterapia indywidualna</h1>
             <h2>Joanna Purzycka</h2>
         </header>
-        <nav>
+        <div class="nav__mobile-view">
+            <i onclick="showNav()" class="nav-menu-open fas fa-bars"></i>
+            <i onclick="hideNav()" class="nav-menu-exit fas fa-times"></i>
+        </div>
+        <nav class="nav__desktop-view">
             <a href="#o_mnie">O MNIE</a>
             <a href="#doświadczenie">DOŚWIADCZENIE</a>
             <a href="#oferta">OFERTA</a>
