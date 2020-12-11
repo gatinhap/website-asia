@@ -8,35 +8,37 @@
     <link rel="stylesheet" href="main.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
 <body>
 <script src="script.js"></script>
 <main class="grid-container">
     <section class="hero" id="hero">
-        <header>
-            <h1>Psychoterapia indywidualna</h1>
-            <h2>Joanna Purzycka</h2>
+        <header class="header">
+            <h1 class="header__title">Psychoterapia<br>indywidualna</h1>
+            <h2 class="header__subtitle"> mgr Joanna Purzycka, psycholog</h2>
         </header>
         <div class="nav__mobile-view">
             <i onclick="showNav()" class="nav-menu-open fas fa-bars"></i>
             <i onclick="hideNav()" class="nav-menu-exit fas fa-times"></i>
         </div>
         <nav class="nav__desktop-view">
-            <a href="#oferta">OFERTA</a>
-            <a href="#lokalizacja">LOKALIZACJA</a>
-            <a href="#kontakt">KONTAKT</a>
-            <a href="#terapia">OPIS TERAPII</a>
-            <a href="#o_mnie">O MNIE</a>
-            <a href="#doświadczenie">DOŚWIADCZENIE</a>
-            <a href="#certyfikat">CERTYFIKAT</a>
+            <a onclick="hideNav()" href="#oferta">OFERTA</a>
+            <a onclick="hideNav()" href="#lokalizacja">SPOTKAJMY SIĘ</a>
+            <a onclick="hideNav()" href="#kontakt">KONTAKT</a>
+            <a onclick="hideNav()" href="#terapia">OPIS TERAPII</a>
+            <a onclick="hideNav()" href="#o_mnie">O MNIE</a>
+            <a onclick="hideNav()" href="#certyfikat">CERTYFIKAT</a>
         </nav>
     </section>
     <section class="offer no-background">
-        <a id="oferta"><h3>Oferta</h3></a>
-        <p>Prowadzę terapię indywidualną oraz udzielam konsultacji. Proponowana przeze mnie forma terapii jest szczególnie pomocna w następujących trudnościach:</p>
-        <ul>
-            <li>zaburzenia lękowe, m.in. fobia, napady paniki, zespół lęku uogólnionego, lęk społeczny, lęk o zdrowie</li>
+        <a id="oferta"><h3 class="bigger">OFERTA</h3></a>
+        <p>Prowadzę terapię indywidualną (psychoterpia poznawczo-behawioralna, terapia schematu). Pomagam w
+            następujących trudnościach:</p>
+        <ul class="bold">
+            <li>zaburzenia lękowe, m.in. fobia, napady paniki, zespół lęku uogólnionego, lęk społeczny, lęk o zdrowie
+            </li>
             <li>zaburzenia obsesyjno-kompulsywne</li>
             <li>zaburzenia odżywiania (anoreksja, bulimia, napadowe objadanie się)</li>
             <li>zaburzenia osobowości</li>
@@ -45,77 +47,102 @@
             <li>choroby psychosomatyczne (np. psychogenne bóle głowy, bóle brzucha)</li>
             <li>inne problemy natury psychologicznej</li>
         </ul>
-        <p>Konsultacje mogą być pomocne w rozpoznaniu przyczyny aktualnych problemów oraz znalezieniu sposobów na poradzenie sobie z nimi.</p>
         <p>Cena za spotkanie online - 120 zł / 50 min.</p>
     </section>
-    <section class="info">
+    <section class="info add-background">
         <div class="card-container">
             <div class="card">
-                <a id="lokalizacja"><h3 class="card__title">Lokalizacja</h3></a>
-                <p class="card__text">Obecnie prowadzę terapię w trybie online poprzez platformy Zoom i Skype</p>
+                <a id="lokalizacja"><h3 class="bigger card__title">SPOTKAJMY SIĘ</h3></a>
+                <p class="card__text">Obecnie prowadzę terapię w trybie online poprzez platformy <span class="bold">Zoom i Skype</span>
+                </p>
             </div>
         </div>
         <div class="card-container">
-            <div class="card">
-                <a id="kontakt"><h3 class="card__title">Kontakt</h3></a>
+            <div class="card no-padding">
+                <a id="kontakt"><h3 class="bigger card__title">KONTAKT</h3></a>
                 <p class="card__text">
-                    <span>jpurzycka89@gmail.com</span><br>
-                    <span>+48 600 907 696</span>
+                    <span class="bold">mgr Joanna Purzycka, psycholog</span><br>
+                    <span>certyfikowany psychoterapeuta poznawczo-behawioralny</span><br><br>
+                    <span>tel.: </span> <span class="bold">+48 600 907 696</span><br>
+                    <span>e-mail: jpurzycka89@gmail.com</span>
                 </p>
             </div>
         </div>
     </section>
-    <section class="therapy-desc">
+    <section id="test" class="therapy1">
         <div class="card-container">
-            <div class="card add-background">
-                <a id="terapia"><h3 class="card__title">Terapia poznawczo-behawioralna</h3></a>
-                <p class="card__text">Psychoterapia poznawczo-behawioralna (Cognitive Behavioural Therapy), w skrócie CBT, jest jedną z najlepiej przebadanych, a zarazem najskuteczniejszych form leczenia zaburzeń psychicznych, szczególnie takich jak depresja, zaburzenia lękowe, zespół stresu pourazowego czy też zaburzenia odżywiania.<br>
-                    Terapia jest prowadzona w formie rozmowy na temat tego, jak pacjent postrzega samego siebie, świat oraz innych ludzi. Zajmuje się problemami oraz trudnościami w funkcjonowaniu, które dotyczą jego „tu i teraz”. Relacja pomiędzy pacjentem, a terapeutą jest otwarta i oparta na współpracy. Wspólnie starają się odkryć i zrozumieć, jak na zachowanie pacjenta wpływają różne myśli i uczucia. Dzięki temu zwiększa się jego samoświadomość i poczucie wpływu na swój sposób myślenia oraz zachowania, a to przyczynia się do poprawy samopoczucia. Zarazem warto pamiętać, że proces terapeutyczny wymaga konfrontacji z własnymi wspomnieniami i uczuciami, a to może być źródłem przejściowego niepokoju lub dyskomfortu.<br>
-                    Terapię CBT opracowuje się dla każdej osoby indywidualnie tak, aby zmaksymalizować skuteczność terapii i przeprowadzić ją w możliwie najkrótszym czasie, a dzięki temu obniżyć ponoszone koszty leczenia.<br>
-                    Podsumowując, największą zaletą CBT jest krótkoterminowość (w zależności od problemu) oraz potwierdzona badaniami skuteczność w leczeniu określonych zaburzeń psychicznych.
+            <div class="card">
+                <a onclick="showContent()" id="terapia"><h3 class="bigger card__title">TERAPIA POZNAWCZO-BEHAWIORALNA</h3></a>
+                <p class="card__text hide">Psychoterapia poznawczo-behawioralna (Cognitive Behavioural Therapy), w skrócie
+                    CBT, jest jedną z najlepiej przebadanych, a zarazem <span class="bold">najskuteczniejszych form leczenia</span>
+                    problemów natury psychologicznej.<br><br>
+                    Terapia jest prowadzona w formie rozmowy na temat tego, jak pacjent postrzega samego siebie, świat
+                    oraz innych ludzi. Zajmuje się problemami oraz trudnościami w funkcjonowaniu, które dotyczą jego „tu
+                    i teraz”. <span class="bold">Relacja pomiędzy pacjentem, a terapeutą jest otwarta i oparta na współpracy.</span>
+                    Wspólnie starają się odkryć i zrozumieć, jak na zachowanie pacjenta wpływają różne myśli i uczucia.
+                    Dzięki
+                    temu zwiększa się jego samoświadomość i poczucie wpływu na swój sposób myślenia oraz zachowania, a
+                    to przyczynia się do poprawy samopoczucia.<br><br>
+                    Terapię CBT opracowuje się dla każdej osoby indywidualnie tak, aby zmaksymalizować skuteczność
+                    terapii i przeprowadzić ją w możliwie najkrótszym czasie, a dzięki temu obniżyć ponoszone koszty
+                    leczenia.<br><br>
+                    Podsumowując, największą zaletą CBT jest krótkoterminowość (w zależności od problemu) oraz
+                    potwierdzona badaniami skuteczność w leczeniu określonych zaburzeń natury psychologicznej.
                 </p>
             </div>
         </div>
+       </section>
+    <section class="therapy2">
         <div class="card-container">
-            <div class="card add-background">
-                <h3 class="card__title">Terapia schematu</h3>
-                <p class="card__text">Terapia schematu jest głównie wykorzystywana w leczeniu zaburzeń osobowości. Koncentruje się na schematach oraz przekonaniach
-                    leżących u podłoża takich objawów jak depresja, ataki paniki, uzależnienia, bezsenność, zaburzenia lękowe itp. Jednym ze stosowanych narzędzi
-                    pracy są techniki wyobrażeniowe, które pozwalają dotrzeć do trudnych, lecz często głęboko ukrytych emocji pacjenta i złagodzić ich intensywność.
-                    Dzięki temu mają one mniejszy wpływ na codzienne funkcjonowanie, a jakość życia wzrasta.</p>
+            <div class="card">
+                <h3 class="bigger card__title">TERAPIA SCHEMATU</h3>
+                <p class="card__text">Terapia schematu jest głównie wykorzystywana w leczeniu zaburzeń osobowości.
+                    Koncentruje się na schematach oraz przekonaniach
+                    leżących u podłoża takich objawów jak depresja, ataki paniki, uzależnienia, bezsenność, zaburzenia
+                    lękowe itp. Jednym ze stosowanych narzędzi
+                    pracy są techniki wyobrażeniowe, które pozwalają dotrzeć do <span class="bold"> trudnych, lecz często głęboko ukrytych
+                    emocji pacjenta i złagodzić ich intensywność.</span>
+                    Dzięki temu mają one mniejszy wpływ na codzienne funkcjonowanie, a <span class="bold"> jakość życia wzrasta.</span>
+                </p>
             </div>
         </div>
     </section>
     <section class="about">
         <div class="card-container">
             <div class="card">
-                <a id="o_mnie"><h3 class="card__title add-padding">O mnie</h3></a>
-                <p class="card__text add-padding">Jestem certyfikowanym psychoterapeutą poznawczo-behawioralnym. Pracuję z dziećmi i młodzieżą oraz z osobami dorosłymi.<br>
-                    Pracę terapeutyczną traktuję jako wspólną drogę opartą na partnerstwie, w ramach którego pacjent jest specjalistą od własnych przeżyć i problemów, a terapeuta jest ekspertem w zakresie mechanizmów powstawania zaburzeń. Wspólnie poszukujemy przyczyn aktualnych trudności oraz drogi do ich skutecznego pokonania. W swojej pracy wykorzystuję różne podejścia terapeutyczne – terapię poznawczo-behawioralną, terapię schematu oraz dialektyczną terapię behawioralną.<br>
-                    Przygotowuję się do uzyskania Certyfikatu Terapii Schematów w International Society of Schema Therapy (ISST) oraz jestem w trakcie czteroletnich studiów podyplomowych w specjalizacji psychologii klinicznej na Uniwersytecie SWPS. Swoją pracę poddaję regularnej superwizji.
+                <a id="o_mnie"><h3 class="bigger card__title add-padding">O MNIE</h3></a>
+                <p class="card__text add-padding">Jestem certyfikowanym psychoterapeutą poznawczo-behawioralnym. Pracuję
+                    z dziećmi i młodzieżą oraz z osobami dorosłymi.<br>
+                    <span class="bold">Pracę terapeutyczną traktuję jako wspólną drogę opartą na partnerstwie, w ramach którego pacjent
+                    jest specjalistą od własnych przeżyć i problemów, a terapeuta jest ekspertem w zakresie mechanizmów
+                    powstawania zaburzeń. Wspólnie poszukujemy przyczyn aktualnych trudności oraz drogi do ich
+                    skutecznego pokonania. </span> W swojej pracy wykorzystuję różne podejścia terapeutyczne – terapię
+                    poznawczo-behawioralną, terapię schematu oraz dialektyczną terapię behawioralną.<br><br>
+                    Przygotowuję się do uzyskania Certyfikatu Terapii Schematów w International Society of Schema
+                    Therapy (ISST) oraz jestem w trakcie czteroletnich studiów podyplomowych w specjalizacji psychologii
+                    klinicznej na Uniwersytecie SWPS. Swoją pracę poddaję regularnej superwizji.<br><br>
+                    <span>Na co dzień pracuję w poradni psychologicznej dla dzieci w Rudzie Śląskiej, w Górnośląskim Centrum Zdrowia Dziecka w Katowicach oraz prowadzę
+                terapię indywidualną. Ponadto, w ramach specjalizacji z psychologii klinicznej realizuję liczne staże kliniczne, m.in. na oddziałach psychiatrii
+                dziecięcej i dorosłych oraz oddziałach somatycznych.<br><br>
+Uczestniczyłam w licznych kursach z zakresu Stosowanej Analizy Zachowania oraz Dialogu Motywującego.
+</span>
                 </p>
             </div>
         </div>
-        <div class="about__photo-wrapper">
-            <img class="about__photo" src="images/asia-sylwetka.JPG" alt="Joanna Purzycka - zdjęcie">
-        </div>
     </section>
-    <section class="experience">
-        <div class="content-wrapper">
-            <a id="doświadczenie"><h3>Doświadczenie</h3></a>
-            <span>Na co dzień pracuję w poradni psychologicznej dla dzieci w Rudzie Śląskiej, w Górnośląskim Centrum Zdrowia Dziecka w Katowicach oraz prowadzę
-                terapię indywidualną. Ponadto, w ramach specjalizacji z psychologii klinicznej realizuję liczne staże kliniczne, m.in. na oddziałach psychiatrii
-                dziecięcej i dorosłych oraz oddziałach somatycznych.<br>
-Uczestniczyłam w licznych kursach z zakresu Stosowanej Analizy Zachowania oraz Dialogu Motywującego.
-</span>
-        </div>
-    </section>
+    <div class="photo-wrapper">
+        <img class="photo" src="images/asia-sylwetka.JPG" alt="Joanna Purzycka - zdjęcie">
+    </div>
     <section class="cert">
         <div class="content-wrapper">
-            <a id="certyfikat"><h3>Certyfikat</h3></a>
+            <a id="certyfikat"><h3 class="bigger">CERTYFIKAT</h3></a>
         </div>
     </section>
 </main>
+<div class="sticky-wrapper">
+    <i class="sticky fas fa-angle-up"></i>
+</div>
+<footer>Made by <a href="https://github.com/gatinhap/website-joanna">Kotki</a></footer>
 
 </body>
 </html>

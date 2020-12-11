@@ -6,18 +6,19 @@ function showNav() {
         x.className = "hero";
     }
 
-    // const y = document.getElementById("wrapper");
-    // if (y.className === "wrapper") {
-    //     y.className += " responsive";
-    // } else {
-    //     y.className = "wrapper";
-    // }
 }
 
 function hideNav() {
     const element = document.getElementById("hero");
     element.classList.remove("responsive");
 
-    // const background = document.getElementById("wrapper");
-    // background.classList.remove("responsive");
+}
+
+function showContent() {
+    const x = document.getElementById("test");
+    if (x.className === "therapy1") {
+        x.className += " desktop";
+    } else {
+        x.className = "therapy1"
+    }
 }

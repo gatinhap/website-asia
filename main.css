@@ -5,6 +5,7 @@
 
 * {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -19,8 +20,18 @@ a {
     color: inherit;
 }
 
+footer {
+    padding: 1em;
+    text-align: center;
+    font-size: 12px;
+}
+
 .no-background {
     background-color: transparent;
+}
+
+.no-padding {
+    padding-top: 0;
 }
 
 .add-background {
@@ -35,13 +46,14 @@ a {
 .grid-container {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 100vh repeat(6, auto);
+    grid-template-rows: 100vh repeat(7, auto);
     grid-template-areas:    "hero"
                             "offer"
-                            "info"
-                            "services"
+                            "contact-info"
+                            "cbt"
+                            "schemat"
                             "about"
-                            "experience"
+                            "photo"
                             "cert";
     margin: 0;
     width: 100%;
@@ -121,17 +133,12 @@ a {
     padding: 0 1em;
 }
 
-.about__photo-wrapper {
+.photo-wrapper {
+    grid-area: photo;
 }
 
-.about__photo {
+.photo {
     width: 100%;
-}
-
-.experience {
-    grid-area: experience;
-    padding: 0 1em;
-    color: var(--primary-dark);
 }
 
 .offer {
@@ -139,20 +146,25 @@ a {
     padding: 0 2em;
 }
 
-.therapy-desc {
-    grid-area: services;
-    padding: 0 1em;
+.therapy1 {
+    grid-area: cbt;
+    /*padding: 0 1em;*/
     color: var(--primary-dark);
 }
 
+
+.therapy2 {
+    grid-area: schemat;
+}
+
 .info {
-    grid-area: info;
+    grid-area: contact-info;
     padding: 0 1em;
 }
 
 .cert {
     grid-area: cert;
-    padding: 0 1em;
+    /*padding: 0 1em;*/
 }
 
 .card-container {
@@ -169,4 +181,80 @@ a {
 
 .card__text {
     margin: 0;
+}
+
+.sticky-wrapper {
+    position: relative;
+}
+
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 1em;
+    right: 1em;
+    font-size: 30px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+
+.bold {
+    font-weight: 600;
+}
+
+.bigger {
+   font-size:  23px;
+}
+
+@media only screen and (min-width: 1000px) {
+
+    .header {
+        margin-top: 150px;
+    }
+
+    .header__title {
+       font-size:  60px;
+    }
+
+    .header__subtitle {
+        font-weight: lighter;
+    }
+
+    .grid-container {
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 100vh repeat(4, auto);
+        grid-template-areas:    "hero hero"
+                            "offer contact-info"
+                            "cbt schemat"
+                            "about photo"
+                            "cert cert";
+        grid-row-gap: 1em;
+
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .therapy1 {
+        place-self: center;
+        width: 100%;
+        height: 100%;
+        background-color: var(--primary-light);
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .therapy1.desktop a {
+        display: none;
+    }
+
+    .therapy1.desktop p {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(254, 246, 228, 1);
+    }
 }
