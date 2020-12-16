@@ -12,7 +12,8 @@
           integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
 <body>
-<script src="script.js"></script>
+
+<a id="top"></a>
 <main class="grid-container">
     <section class="hero" id="hero">
         <header class="header">
@@ -32,8 +33,8 @@
             <a onclick="hideNav()" href="#certyfikat">CERTYFIKAT</a>
         </nav>
     </section>
-    <section class="offer no-background">
-        <a id="oferta"><h3 class="bigger">OFERTA</h3></a>
+    <section class="offer">
+        <a id="oferta"><h3 class="">OFERTA</h3></a>
         <p>Prowadzę terapię indywidualną (psychoterpia poznawczo-behawioralna, terapia schematu). Pomagam w
             następujących trudnościach:</p>
         <ul class="bold">
@@ -50,84 +51,74 @@
         <p>Cena za spotkanie online - 120 zł / 50 min.</p>
     </section>
     <section class="info add-background">
-        <div class="card-container">
-            <div class="card">
-                <a id="lokalizacja"><h3 class="bigger card__title">SPOTKAJMY SIĘ</h3></a>
-                <p class="card__text">Obecnie prowadzę terapię w trybie online poprzez platformy <span class="bold">Zoom i Skype</span>
-                </p>
-            </div>
+        <div class="card">
+            <a id="lokalizacja"><h3 class="card__title">SPOTKAJMY SIĘ</h3></a>
+            <p class="card__text">Obecnie prowadzę terapię w trybie online poprzez platformy <span class="bold">Zoom i Skype</span>
+            </p>
         </div>
-        <div class="card-container">
-            <div class="card no-padding">
-                <a id="kontakt"><h3 class="bigger card__title">KONTAKT</h3></a>
-                <p class="card__text">
-                    <span class="bold">mgr Joanna Purzycka, psycholog</span><br>
-                    <span>certyfikowany psychoterapeuta poznawczo-behawioralny</span><br><br>
-                    <span>tel.: </span> <span class="bold">+48 600 907 696</span><br>
-                    <span>e-mail: jpurzycka89@gmail.com</span>
-                </p>
+        <address class="card">
+            <a id="kontakt"><h3 class="card__title">KONTAKT</h3></a>
+            <div>
+                <span class="bold">mgr Joanna Purzycka, psycholog</span><br>certyfikowany psychoterapeuta
+                poznawczo-behawioralny<br><br>
+                tel.: <span class="bold">+48 600 907 696</span><br>e-mail: jpurzycka89@gmail.com
             </div>
-        </div>
+        </address>
     </section>
     <section id="test" class="therapy1">
-        <div class="card-container">
-            <div class="card">
-                <a onclick="showContent()" id="terapia"><h3 class="bigger card__title">TERAPIA POZNAWCZO-BEHAWIORALNA</h3></a>
-                <p class="card__text hide">Psychoterapia poznawczo-behawioralna (Cognitive Behavioural Therapy), w skrócie
-                    CBT, jest jedną z najlepiej przebadanych, a zarazem <span class="bold">najskuteczniejszych form leczenia</span>
-                    problemów natury psychologicznej.<br><br>
-                    Terapia jest prowadzona w formie rozmowy na temat tego, jak pacjent postrzega samego siebie, świat
-                    oraz innych ludzi. Zajmuje się problemami oraz trudnościami w funkcjonowaniu, które dotyczą jego „tu
-                    i teraz”. <span class="bold">Relacja pomiędzy pacjentem, a terapeutą jest otwarta i oparta na współpracy.</span>
-                    Wspólnie starają się odkryć i zrozumieć, jak na zachowanie pacjenta wpływają różne myśli i uczucia.
-                    Dzięki
-                    temu zwiększa się jego samoświadomość i poczucie wpływu na swój sposób myślenia oraz zachowania, a
-                    to przyczynia się do poprawy samopoczucia.<br><br>
-                    Terapię CBT opracowuje się dla każdej osoby indywidualnie tak, aby zmaksymalizować skuteczność
-                    terapii i przeprowadzić ją w możliwie najkrótszym czasie, a dzięki temu obniżyć ponoszone koszty
-                    leczenia.<br><br>
-                    Podsumowując, największą zaletą CBT jest krótkoterminowość (w zależności od problemu) oraz
-                    potwierdzona badaniami skuteczność w leczeniu określonych zaburzeń natury psychologicznej.
-                </p>
-            </div>
+        <div onclick="showContent()" id="terapia" class="test card center">
+            <a><h3 class="card__title">TERAPIA POZNAWCZO-BEHAWIORALNA</h3></a>
+            <p class="card__text hide">Psychoterapia poznawczo-behawioralna (Cognitive Behavioural Therapy), w skrócie
+                CBT, jest jedną z najlepiej przebadanych, a zarazem <span
+                        class="bold">najskuteczniejszych form leczenia</span>
+                problemów natury psychologicznej.<br><br>
+                Terapia jest prowadzona w formie rozmowy na temat tego, jak pacjent postrzega samego siebie, świat
+                oraz innych ludzi. Zajmuje się problemami oraz trudnościami w funkcjonowaniu, które dotyczą jego „tu
+                i teraz”. <span class="bold">Relacja pomiędzy pacjentem, a terapeutą jest otwarta i oparta na współpracy.</span>
+                Wspólnie starają się odkryć i zrozumieć, jak na zachowanie pacjenta wpływają różne myśli i uczucia.
+                Dzięki
+                temu zwiększa się jego samoświadomość i poczucie wpływu na swój sposób myślenia oraz zachowania, a
+                to przyczynia się do poprawy samopoczucia.<br><br>
+                Terapię CBT opracowuje się dla każdej osoby indywidualnie tak, aby zmaksymalizować skuteczność
+                terapii i przeprowadzić ją w możliwie najkrótszym czasie, a dzięki temu obniżyć ponoszone koszty
+                leczenia.<br><br>
+                Podsumowując, największą zaletą CBT jest krótkoterminowość (w zależności od problemu) oraz
+                potwierdzona badaniami skuteczność w leczeniu określonych zaburzeń natury psychologicznej.
+            </p>
         </div>
-       </section>
+    </section>
     <section class="therapy2">
-        <div class="card-container">
-            <div class="card">
-                <h3 class="bigger card__title">TERAPIA SCHEMATU</h3>
-                <p class="card__text">Terapia schematu jest głównie wykorzystywana w leczeniu zaburzeń osobowości.
-                    Koncentruje się na schematach oraz przekonaniach
-                    leżących u podłoża takich objawów jak depresja, ataki paniki, uzależnienia, bezsenność, zaburzenia
-                    lękowe itp. Jednym ze stosowanych narzędzi
-                    pracy są techniki wyobrażeniowe, które pozwalają dotrzeć do <span class="bold"> trudnych, lecz często głęboko ukrytych
+        <div class="card">
+            <h3 class="card__title">TERAPIA SCHEMATU</h3>
+            <p class="card__text">Terapia schematu jest głównie wykorzystywana w leczeniu zaburzeń osobowości.
+                Koncentruje się na schematach oraz przekonaniach
+                leżących u podłoża takich objawów jak depresja, ataki paniki, uzależnienia, bezsenność, zaburzenia
+                lękowe itp. Jednym ze stosowanych narzędzi
+                pracy są techniki wyobrażeniowe, które pozwalają dotrzeć do <span class="bold"> trudnych, lecz często głęboko ukrytych
                     emocji pacjenta i złagodzić ich intensywność.</span>
-                    Dzięki temu mają one mniejszy wpływ na codzienne funkcjonowanie, a <span class="bold"> jakość życia wzrasta.</span>
-                </p>
-            </div>
+                Dzięki temu mają one mniejszy wpływ na codzienne funkcjonowanie, a <span class="bold"> jakość życia wzrasta.</span>
+            </p>
         </div>
     </section>
     <section class="about">
-        <div class="card-container">
-            <div class="card">
-                <a id="o_mnie"><h3 class="bigger card__title add-padding">O MNIE</h3></a>
-                <p class="card__text add-padding">Jestem certyfikowanym psychoterapeutą poznawczo-behawioralnym. Pracuję
-                    z dziećmi i młodzieżą oraz z osobami dorosłymi.<br>
-                    <span class="bold">Pracę terapeutyczną traktuję jako wspólną drogę opartą na partnerstwie, w ramach którego pacjent
+        <div class="card">
+            <a id="o_mnie"><h3 class="card__title">O MNIE</h3></a>
+            <p class="card__text">Jestem certyfikowanym psychoterapeutą poznawczo-behawioralnym. Pracuję
+                z dziećmi i młodzieżą oraz z osobami dorosłymi.<br>
+                <span class="bold">Pracę terapeutyczną traktuję jako wspólną drogę opartą na partnerstwie, w ramach którego pacjent
                     jest specjalistą od własnych przeżyć i problemów, a terapeuta jest ekspertem w zakresie mechanizmów
                     powstawania zaburzeń. Wspólnie poszukujemy przyczyn aktualnych trudności oraz drogi do ich
                     skutecznego pokonania. </span> W swojej pracy wykorzystuję różne podejścia terapeutyczne – terapię
-                    poznawczo-behawioralną, terapię schematu oraz dialektyczną terapię behawioralną.<br><br>
-                    Przygotowuję się do uzyskania Certyfikatu Terapii Schematów w International Society of Schema
-                    Therapy (ISST) oraz jestem w trakcie czteroletnich studiów podyplomowych w specjalizacji psychologii
-                    klinicznej na Uniwersytecie SWPS. Swoją pracę poddaję regularnej superwizji.<br><br>
-                    <span>Na co dzień pracuję w poradni psychologicznej dla dzieci w Rudzie Śląskiej, w Górnośląskim Centrum Zdrowia Dziecka w Katowicach oraz prowadzę
+                poznawczo-behawioralną, terapię schematu oraz dialektyczną terapię behawioralną.<br><br>
+                Przygotowuję się do uzyskania Certyfikatu Terapii Schematów w International Society of Schema
+                Therapy (ISST) oraz jestem w trakcie czteroletnich studiów podyplomowych w specjalizacji psychologii
+                klinicznej na Uniwersytecie SWPS. Swoją pracę poddaję regularnej superwizji.<br><br>
+                <span>Na co dzień pracuję w poradni psychologicznej dla dzieci w Rudzie Śląskiej, w Górnośląskim Centrum Zdrowia Dziecka w Katowicach oraz prowadzę
                 terapię indywidualną. Ponadto, w ramach specjalizacji z psychologii klinicznej realizuję liczne staże kliniczne, m.in. na oddziałach psychiatrii
                 dziecięcej i dorosłych oraz oddziałach somatycznych.<br><br>
 Uczestniczyłam w licznych kursach z zakresu Stosowanej Analizy Zachowania oraz Dialogu Motywującego.
 </span>
-                </p>
-            </div>
+            </p>
         </div>
     </section>
     <div class="photo-wrapper">
@@ -135,14 +126,14 @@ Uczestniczyłam w licznych kursach z zakresu Stosowanej Analizy Zachowania oraz 
     </div>
     <section class="cert">
         <div class="content-wrapper">
-            <a id="certyfikat"><h3 class="bigger">CERTYFIKAT</h3></a>
+            <a id="certyfikat"><h3 class="">CERTYFIKAT</h3></a>
         </div>
     </section>
 </main>
-<div class="sticky-wrapper">
-    <i class="sticky fas fa-angle-up"></i>
-</div>
+<!--<div class="sticky-wrapper">-->
+<a id="sticky" onscroll="showSticky()" onclick="hideSticky()" href="#top" class="sticky fas fa-angle-up"></a>
+<!--</div>-->
 <footer>Made by <a href="https://github.com/gatinhap/website-joanna">Kotki</a></footer>
-
+<script src="script.js"></script>
 </body>
 </html>

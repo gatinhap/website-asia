@@ -22,3 +22,20 @@ function showContent() {
         x.className = "therapy1"
     }
 }
+
+
+document.getElementById("sticky").addEventListener("click", hideSticky);
+
+function hideSticky() {
+    document.getElementById("sticky").style.display = "none";
+}
+
+document.addEventListener("scroll", showSticky);
+
+function showSticky() {
+    document.getElementById("sticky").style.display = "block";
+}
+
+
+
+

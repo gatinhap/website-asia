@@ -26,14 +26,6 @@ footer {
     font-size: 12px;
 }
 
-.no-background {
-    background-color: transparent;
-}
-
-.no-padding {
-    padding-top: 0;
-}
-
 .add-background {
     background-color: var(--primary-light);
 }
@@ -129,12 +121,9 @@ footer {
     grid-area: about;
 }
 
-.add-padding {
-    padding: 0 1em;
-}
-
 .photo-wrapper {
     grid-area: photo;
+    place-self: center;
 }
 
 .photo {
@@ -148,7 +137,6 @@ footer {
 
 .therapy1 {
     grid-area: cbt;
-    /*padding: 0 1em;*/
     color: var(--primary-dark);
 }
 
@@ -164,47 +152,37 @@ footer {
 
 .cert {
     grid-area: cert;
-    /*padding: 0 1em;*/
 }
 
-.card-container {
-    display: flex;
-    flex-direction: column;
-    /* for desktop: flex-direction: row;*/
+.card-title {
+    font-size: 23px;
 }
 
 .card {
-    display: flex;
-    flex-direction: column;
     padding: 1em;
 }
 
-.card__text {
-    margin: 0;
-}
-
 .sticky-wrapper {
-    position: relative;
+
+
 }
 
 .sticky {
-    position: -webkit-sticky;
-    position: sticky;
-    bottom: 1em;
+    position: fixed;
     right: 1em;
+    bottom: 1em;
     font-size: 30px;
     font-weight: 500;
     cursor: pointer;
 }
 
+.sticky.fas {
+    display: none;
+}
 
 
 .bold {
     font-weight: 600;
-}
-
-.bigger {
-   font-size:  23px;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -214,7 +192,7 @@ footer {
     }
 
     .header__title {
-       font-size:  60px;
+        font-size: 60px;
     }
 
     .header__subtitle {
@@ -223,7 +201,7 @@ footer {
 
     .grid-container {
         grid-template-columns: 50% 50%;
-        grid-template-rows: 100vh repeat(4, auto);
+        grid-template-rows: 100vh auto 250px auto auto;
         grid-template-areas:    "hero hero"
                             "offer contact-info"
                             "cbt schemat"
@@ -237,13 +215,28 @@ footer {
         display: none;
     }
 
-    .therapy1 {
-        place-self: center;
+    .therapy1.desktop {
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
         width: 100%;
-        height: 100%;
+        max-width: 1440px;
+        height: 100vh;
+        background-color: rgba(254, 246, 228, 0.97);
+        overflow-x: hidden;
+    }
+
+    .therapy1 {
         background-color: var(--primary-light);
         text-align: center;
         cursor: pointer;
+    }
+
+    .therapy1.desktop .test {
+        display: flex;
+        align-items: center;
+        height: 100%;
     }
 
     .therapy1.desktop a {
@@ -251,10 +244,11 @@ footer {
     }
 
     .therapy1.desktop p {
-        position: relative;
         display: block;
-        width: 100%;
-        height: 100vh;
-        background-color: rgba(254, 246, 228, 1);
+    }
+
+    .center {
+        position: relative;
+        padding: calc(1em + 4vw) 1em;
     }
 }
