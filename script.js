@@ -14,13 +14,35 @@ function hideNav() {
 
 }
 
-function showContent() {
-    const x = document.getElementById("test");
-    if (x.className === "therapy1") {
-        x.className += " desktop";
-    } else {
-        x.className = "therapy1"
-    }
+// function showContent() {
+//     const x = document.getElementById("section");
+//     if (x.classList.contains("section-style")) {
+//         x.classList.add(" desktop");
+//     } else {
+//         x.className = "section-style"
+//     }
+// }
+
+// function showContent() {
+//     let x = document.querySelectorAll('.section-style');
+//     for (let i = 0; i < x.length; i++) {
+//         x[i].classList.add('desktop');
+//     }
+// }
+
+function showTherapy1() {
+    const x = document.querySelector('.therapy1');
+    x.classList.toggle('desktop');
+}
+
+function showTherapy2() {
+    const x = document.querySelector('.therapy2');
+    x.classList.toggle('desktop');
+}
+
+function showAbout() {
+    const x = document.querySelector('.about');
+    x.classList.toggle('desktop');
 }
 
 

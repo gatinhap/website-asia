@@ -30,11 +30,6 @@ footer {
     background-color: var(--primary-light);
 }
 
-.content-wrapper {
-    padding: 1em;
-    background-color: var(--primary-light);
-}
-
 .grid-container {
     display: grid;
     grid-template-columns: 100%;
@@ -42,11 +37,11 @@ footer {
     grid-template-areas:    "hero"
                             "offer"
                             "contact-info"
+                            "therapy-desc"
                             "cbt"
                             "schemat"
-                            "about"
-                            "photo"
-                            "cert";
+                            "about-me"
+                            "photo";
     margin: 0;
     width: 100%;
 }
@@ -119,6 +114,7 @@ footer {
 
 .about {
     grid-area: about;
+    align-self: center;
 }
 
 .photo-wrapper {
@@ -127,57 +123,103 @@ footer {
 }
 
 .photo {
+    margin-top: 52px;
     width: 100%;
+    object-fit: cover;
 }
 
 .offer {
     grid-area: offer;
+    margin-top: 1.5em;
     padding: 0 2em;
+}
+
+.therapy-desc {
+    grid-area: therapy-desc;
+    margin-top: 2.5em;
+    margin-bottom: 1.3em;
+    padding: 0 1em;
+}
+
+.about-me__title {
+    margin-top: 2.5em;
+    margin-bottom: 2.3em;
+    padding: 0 1em;
+}
+
+.main-title {
+    border-bottom: 1px solid var(--primary-dark);
+    letter-spacing: 2px;
+    font-size: 21px;
+    font-weight: 600;
 }
 
 .therapy1 {
     grid-area: cbt;
-    color: var(--primary-dark);
+    align-self: center;
+    margin-bottom: 2.5em;
+
 }
 
 
 .therapy2 {
     grid-area: schemat;
+    align-self: center;
+    margin-bottom: 2.5em;
+
 }
+
+.about-me {
+    grid-area: about-me;
+}
+
+
 
 .info {
     grid-area: contact-info;
+    margin-top: 1.5em;
     padding: 0 1em;
 }
 
 .cert {
     grid-area: cert;
-}
-
-.card-title {
-    font-size: 23px;
+    align-self: center;
 }
 
 .card {
+    border: 1px solid var(--primary-dark);
+    padding: 1em;
+    height: 3em;
+}
+
+.card__title {
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.add-margin {
+    margin-bottom: 30px;
+}
+
+.block {
     padding: 1em;
 }
 
+
 .sticky-wrapper {
-
-
+    transform: translateX(-50%);
+    margin-left: 50%;
+    width: 100%;
 }
 
 .sticky {
     position: fixed;
-    right: 1em;
     bottom: 1em;
+    right: 1em;
+    cursor: pointer;
     font-size: 30px;
     font-weight: 500;
-    cursor: pointer;
-}
-
-.sticky.fas {
-    display: none;
 }
 
 
@@ -200,55 +242,51 @@ footer {
     }
 
     .grid-container {
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 100vh auto 250px auto auto;
+        grid-template-columns: calc(50% - 0.5em) calc(50% - 0.5em);
+        grid-template-rows: 100vh auto auto auto auto;
         grid-template-areas:    "hero hero"
                             "offer contact-info"
+                            "therapy-desc therapy-desc"
                             "cbt schemat"
-                            "about photo"
-                            "cert cert";
-        grid-row-gap: 1em;
-
+                            "about-me photo";
+        grid-gap: 1em;
+        box-sizing: border-box;
     }
 
     .hide {
         display: none;
     }
 
-    .therapy1.desktop {
+    .section-style.desktop {
         position: fixed;
         top: 0;
         left: 50%;
         transform: translateX(-50%);
         width: 100%;
-        max-width: 1440px;
+        max-width: 1400px;
         height: 100vh;
         background-color: rgba(254, 246, 228, 0.97);
         overflow-x: hidden;
     }
 
-    .therapy1 {
-        background-color: var(--primary-light);
-        text-align: center;
+    .section-style {
+        height: 5em;
         cursor: pointer;
     }
 
-    .therapy1.desktop .test {
+    .center {
         display: flex;
+        justify-content: center;
         align-items: center;
         height: 100%;
     }
 
-    .therapy1.desktop a {
+    .section-style.desktop h3 {
         display: none;
     }
 
-    .therapy1.desktop p {
+    .section-style.desktop p {
         display: block;
     }
 
-    .center {
-        position: relative;
-        padding: calc(1em + 4vw) 1em;
-    }
 }
