@@ -37,7 +37,7 @@ a {
                             "therapy-desc"
                             "about-me"
                             "photo-wrapper";
-    grid-column-gap: 1em;
+    grid-column-gap: 20px;
     margin: 0;
     width: 100%;
 }
@@ -172,24 +172,31 @@ a {
     font-weight: 600;
 }
 
+.photo-container {
+    height: 100%;
+}
+
 .photo {
     width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
-.sticky-centered {
-    transform: translateX(-50%);
-    margin-left: 50%;
-    width: 100%;
+.sticky-wrapper {
+    position: fixed;
+    z-index: 9;
+    bottom: 5px;
+    right: 5px;
 }
 
 .sticky {
-    position: fixed;
-    bottom: -20px;
-    right: 5px;
     cursor: pointer;
     font-size: 30px;
     font-weight: 500;
+}
+
+.sticky.fas {
+    display: none;
 }
 
 footer {
@@ -249,6 +256,20 @@ footer {
     .subtitle:hover {
         color: #6c757d;
         border-color: #6c757d;
+    }
+
+    .therapy-desc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .therapy-desc a {
+        width: 100%;
+    }
+
+    .therapy1, .therapy2 {
+        width: calc(50% - 30px);
     }
 
     .therapy1.desktop {
@@ -356,7 +377,6 @@ footer {
     }
 
     /* todo: upload cert */
-
     .photo-wrapper {
         margin-top: var(--title-margins);
     }
