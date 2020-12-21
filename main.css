@@ -1,6 +1,8 @@
 :root {
     --primary-dark: #271c19;
     --primary-light: #fef6e4;
+    --primary-padding: 20px;
+    --title-margins: 55px;
 }
 
 * {
@@ -20,35 +22,28 @@ a {
     color: inherit;
 }
 
-footer {
-    padding: 1em;
-    text-align: center;
-    font-size: 12px;
-}
-
-.add-background {
-    background-color: var(--primary-light);
+.bold {
+    font-weight: 600;
 }
 
 .grid-container {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 100vh repeat(7, auto);
+    grid-template-rows: 100vh repeat(6, auto);
     grid-template-areas:    "hero"
                             "offer"
-                            "contact-info"
+                            "meet-me"
+                            "contact"
                             "therapy-desc"
-                            "cbt"
-                            "schemat"
                             "about-me"
-                            "photo";
+                            "photo-wrapper";
+    grid-column-gap: 1em;
     margin: 0;
     width: 100%;
 }
 
 .hero {
     position: relative;
-
     grid-area: hero;
     padding: 1em;
     background-image: url("images/hero.jpg");
@@ -57,6 +52,47 @@ footer {
     background-position: right;
     line-height: 1.15;
     color: var(--primary-dark);
+}
+
+.offer {
+    grid-area: offer;
+    margin-top: var(--title-margins);
+    padding-left: var(--primary-padding);
+    padding-right: var(--primary-padding);
+}
+
+.meet-me {
+    grid-area: meet-me;
+    margin-top: var(--title-margins);
+    padding-left: var(--primary-padding);
+    padding-right: var(--primary-padding);
+    background-color: var(--primary-light);
+}
+
+.contact {
+    grid-area: contact;
+    padding-left: var(--primary-padding);
+    padding-right: var(--primary-padding);
+    background-color: var(--primary-light);
+}
+
+.therapy-desc {
+    grid-area: therapy-desc;
+    margin-top: var(--title-margins);
+    padding-left: var(--primary-padding);
+    padding-right: var(--primary-padding);
+}
+
+.about-me {
+    grid-area: about-me;
+    margin-top: var(--title-margins);
+    padding-left: var(--primary-padding);
+    padding-right: var(--primary-padding);
+    background-color: var(--primary-light);
+}
+
+.photo-wrapper {
+    grid-area: photo-wrapper;
 }
 
 .hero.responsive header {
@@ -90,14 +126,8 @@ footer {
     width: 100%;
     height: 100vh;
     background-color: rgba(254, 246, 228, 0.80);
-    font-weight: 800;
-}
-
-.nav__desktop-view {
-    display: none;
-}
-
-.nav__mobile-view {
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
 .nav-menu-open {
@@ -112,102 +142,42 @@ footer {
     display: none;
 }
 
-.about {
-    grid-area: about;
-    align-self: center;
+.nav__desktop-view {
+    display: none;
 }
 
-.photo-wrapper {
-    grid-area: photo;
-    place-self: center;
+.header {
+    margin-top: 120px;
 }
 
-.photo {
-    margin-top: 52px;
-    width: 100%;
-    object-fit: cover;
+.header__title {
+    font-size: 37px;
 }
 
-.offer {
-    grid-area: offer;
-    margin-top: 1.5em;
-    padding: 0 2em;
+.header__subtitle {
+    font-weight: 500;
 }
 
-.therapy-desc {
-    grid-area: therapy-desc;
-    margin-top: 2.5em;
-    margin-bottom: 1.3em;
-    padding: 0 1em;
-}
-
-.about-me__title {
-    margin-top: 2.5em;
-    margin-bottom: 2.3em;
-    padding: 0 1em;
-}
-
-.main-title {
+.title {
     border-bottom: 1px solid var(--primary-dark);
     letter-spacing: 2px;
     font-size: 21px;
     font-weight: 600;
 }
 
-.therapy1 {
-    grid-area: cbt;
-    align-self: center;
-    margin-bottom: 2.5em;
-
-}
-
-
-.therapy2 {
-    grid-area: schemat;
-    align-self: center;
-    margin-bottom: 2.5em;
-
-}
-
-.about-me {
-    grid-area: about-me;
-}
-
-
-
-.info {
-    grid-area: contact-info;
-    margin-top: 1.5em;
-    padding: 0 1em;
-}
-
-.cert {
-    grid-area: cert;
-    align-self: center;
-}
-
-.card {
-    border: 1px solid var(--primary-dark);
-    padding: 1em;
-    height: 3em;
-}
-
-.card__title {
+.subtitle {
+    margin-top: 35px;
     letter-spacing: 1px;
     font-size: 16px;
     font-weight: 600;
 }
 
-.add-margin {
-    margin-bottom: 30px;
+.photo {
+    width: 100%;
+    object-fit: cover;
 }
 
-.block {
-    padding: 1em;
-}
-
-
-.sticky-wrapper {
+.sticky-centered {
     transform: translateX(-50%);
     margin-left: 50%;
     width: 100%;
@@ -215,20 +185,20 @@ footer {
 
 .sticky {
     position: fixed;
-    bottom: 1em;
-    right: 1em;
+    bottom: -20px;
+    right: 5px;
     cursor: pointer;
     font-size: 30px;
     font-weight: 500;
 }
 
-
-.bold {
-    font-weight: 600;
+footer {
+    padding: 1em;
+    text-align: center;
+    font-size: 12px;
 }
 
 @media only screen and (min-width: 1000px) {
-
     .header {
         margin-top: 150px;
     }
@@ -241,52 +211,154 @@ footer {
         font-weight: lighter;
     }
 
-    .grid-container {
-        grid-template-columns: calc(50% - 0.5em) calc(50% - 0.5em);
-        grid-template-rows: 100vh auto auto auto auto;
-        grid-template-areas:    "hero hero"
-                            "offer contact-info"
-                            "therapy-desc therapy-desc"
-                            "cbt schemat"
-                            "about-me photo";
-        grid-gap: 1em;
-        box-sizing: border-box;
-    }
-
-    .hide {
+    .nav__mobile-view {
         display: none;
     }
 
-    .section-style.desktop {
+    .nav__desktop-view {
+        position: absolute;
+        top: 40px;
+        left: var(--primary-padding);
+        display: flex;
+        justify-content: space-between;
+        min-width: 960px;
+        letter-spacing: 1px;
+        font-weight: 600;
+    }
+
+    .grid-container {
+        grid-template-columns: calc(50% - 0.5em) calc(50% - 0.5em);
+        grid-template-rows: 100vh repeat(4, auto);
+        grid-template-areas:    "hero hero"
+                                "offer meet-me"
+                                "offer contact"
+                                "therapy-desc therapy-desc"
+                                "about-me photo-wrapper";
+    }
+
+    .toggle {
+        display: none;
+    }
+
+    .subtitle {
+        border: 1px solid var(--primary-dark);
+        padding: var(--primary-padding);
+        text-align: center
+    }
+
+    .subtitle:hover {
+        color: #6c757d;
+        border-color: #6c757d;
+    }
+
+    .therapy1.desktop {
         position: fixed;
+        z-index: 10;
         top: 0;
         left: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         transform: translateX(-50%);
+        border: none;
         width: 100%;
         max-width: 1400px;
-        height: 100vh;
+        padding-left: var(--primary-padding);
+        padding-right: var(--primary-padding);
+        height: 100%;
         background-color: rgba(254, 246, 228, 0.97);
         overflow-x: hidden;
     }
 
-    .section-style {
-        height: 5em;
-        cursor: pointer;
-    }
-
-    .center {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-    }
-
-    .section-style.desktop h3 {
+    .therapy1.desktop h3 {
         display: none;
     }
 
-    .section-style.desktop p {
+    .therapy1.desktop .toggle {
         display: block;
+    }
+
+    .therapy2.desktop {
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        left: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(-50%);
+        border: none;
+        width: 100%;
+        max-width: 1400px;
+        padding-left: var(--primary-padding);
+        padding-right: var(--primary-padding);
+        height: 100%;
+        background-color: rgba(254, 246, 228, 0.97);
+        overflow-x: hidden;
+    }
+
+    .therapy2.desktop h3 {
+        display: none;
+    }
+
+    .therapy2.desktop .toggle {
+        display: block;
+    }
+
+    .experience.desktop {
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        left: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(-50%);
+        border: none;
+        width: 100%;
+        max-width: 1400px;
+        padding-left: var(--primary-padding);
+        padding-right: var(--primary-padding);
+        height: 100%;
+        background-color: rgba(254, 246, 228, 0.97);
+        overflow-x: hidden;
+    }
+
+    .experience.desktop h3 {
+        display: none;
+    }
+
+    .experience.desktop .toggle {
+        display: block;
+    }
+
+    .certificate.desktop {
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        left: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(-50%);
+        border: none;
+        width: 100%;
+        max-width: 1400px;
+        padding-left: var(--primary-padding);
+        padding-right: var(--primary-padding);
+        height: 100%;
+        background-color: rgba(254, 246, 228, 0.97);
+        overflow-x: hidden;
+    }
+
+    .certificate.desktop h3 {
+        display: none;
+    }
+
+    /* todo: upload cert */
+
+    .photo-wrapper {
+        margin-top: var(--title-margins);
     }
 
 }
