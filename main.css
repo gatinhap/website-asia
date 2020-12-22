@@ -172,6 +172,10 @@ a {
     font-weight: 600;
 }
 
+.exit {
+    display: none;
+}
+
 .photo-container {
     height: 100%;
 }
@@ -200,7 +204,10 @@ a {
 }
 
 footer {
+    margin: var(--primary-padding) auto 0 auto;
+    border-top: solid 1px var(--primary-dark);
     padding: 1em;
+    width: calc(100% - 6px);
     text-align: center;
     font-size: 12px;
 }
@@ -228,9 +235,13 @@ footer {
         left: var(--primary-padding);
         display: flex;
         justify-content: space-between;
-        min-width: 960px;
+        width: 660px;
         letter-spacing: 1px;
-        font-weight: 600;
+        font-weight: 500;
+    }
+
+    .nav__desktop-view a:hover {
+        color: #bca06b;
     }
 
     .grid-container {
@@ -241,6 +252,7 @@ footer {
                                 "offer contact"
                                 "therapy-desc therapy-desc"
                                 "about-me photo-wrapper";
+        width: calc(100% - 4px);
     }
 
     .toggle {
@@ -254,8 +266,50 @@ footer {
     }
 
     .subtitle:hover {
-        color: #6c757d;
-        border-color: #6c757d;
+        color: #bca06b;
+        border-color: #bca06b;
+    }
+
+    .exit {
+        display: none;
+        border: none;
+        outline: none;
+        font-size: 20px;
+        font-weight: 600;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .exit:hover {
+        color: #bca06b;
+    }
+
+    .therapy1.desktop .exit {
+        position: absolute;
+        top: var(--primary-padding);
+        right: var(--primary-padding);
+        display: initial;
+    }
+
+    .therapy2.desktop .exit {
+        position: absolute;
+        top: var(--primary-padding);
+        right: var(--primary-padding);
+        display: initial;
+    }
+
+    .experience.desktop .exit {
+        position: absolute;
+        top: var(--primary-padding);
+        right: var(--primary-padding);
+        display: initial;
+    }
+
+    .certificate.desktop .exit {
+        position: absolute;
+        top: var(--primary-padding);
+        right: var(--primary-padding);
+        display: initial;
     }
 
     .therapy-desc {
@@ -263,8 +317,8 @@ footer {
         flex-wrap: wrap;
         justify-content: space-between;
     }
-
-    .therapy-desc a {
+/*//*/
+    .therapy-desc h2 {
         width: 100%;
     }
 
@@ -379,6 +433,10 @@ footer {
     /* todo: upload cert */
     .photo-wrapper {
         margin-top: var(--title-margins);
+    }
+
+    footer {
+        width: auto;
     }
 
 }

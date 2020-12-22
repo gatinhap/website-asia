@@ -24,3 +24,8 @@ function showContent(sectionName) {
     const x = document.querySelector('.' + sectionName);
     x.classList.toggle('desktop');
 }
+
+// function closeContent() {
+//     const x = document.getElementById('therapy1');
+//     x.classList.remove('desktop');
+// }

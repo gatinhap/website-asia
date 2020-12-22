@@ -32,7 +32,7 @@
         </nav>
     </section>
     <section class="offer">
-        <a id="oferta"><h2 class="title">OFERTA</h2></a>
+        <h2 id="oferta" class="title">OFERTA</h2>
         <p>Prowadzę terapię indywidualną (psychoterpia poznawczo-behawioralna, terapia schematu). Pomagam w
             następujących trudnościach:</p>
         <ul class="bold">
@@ -49,20 +49,23 @@
         <p>Cena za spotkanie online - 120 zł / 50 min.</p>
     </section>
     <section class="meet-me">
-        <a id="lokalizacja"><h2 class="title">SPOTKAJMY SIĘ</h2></a>
+       <h2 id="lokalizacja" class="title">SPOTKAJMY SIĘ</h2>
         <p>Obecnie prowadzę terapię w trybie online poprzez platformy <span class="bold">Zoom i Skype</span></p>
     </section>
     <section class="contact">
         <div>
-            <a id="kontakt"><h2 class="title">KONTAKT</h2></a>
+            <h2 id="kontakt" class="title">KONTAKT</h2>
             <p><span class="bold">mgr Joanna Purzycka, psycholog</span><br>certyfikowany psychoterapeuta
                 poznawczo-behawioralny</p>
             <p>tel. <span class="bold">+48 600 907 696</span><br>e-mail: jpurzycka89@gmail.com</p>
         </div>
     </section>
     <section class="therapy-desc">
-        <a id="terapia"><h2 class="title">OPIS TERAPII</h2></a>
-        <div onclick="showContent('therapy1')" class="therapy1">
+       <h2 id="terapia" class="title">OPIS TERAPII</h2>
+        <div id="therapy1" onclick="showContent('therapy1')" class="therapy1">
+            <button class="exit" aria-label="close">
+                <span aria-hidden="true">x</span>
+            </button>
             <h3 class="subtitle">TERAPIA POZNAWCZO-BEHAWIORALNA</h3>
             <div class="toggle">
                 <p>Psychoterapia poznawczo-behawioralna (Cognitive Behavioural Therapy), w skrócie CBT, jest jedną z
@@ -85,6 +88,9 @@
             </div>
         </div>
         <div onclick="showContent('therapy2')" class="therapy2">
+            <button class="exit" aria-label="close">
+                <span aria-hidden="true">x</span>
+            </button>
             <h3 class="subtitle">TERAPIA SCHEMATU</h3>
             <p class="toggle">Terapia schematu jest głównie wykorzystywana w leczeniu zaburzeń osobowości. Koncentruje
                 się na
@@ -100,8 +106,11 @@
         </div>
     </section>
     <section class="about-me">
-        <a id="o_mnie"><h2 class="title">O MNIE</h2></a>
+        <h2 id="o_mnie" class="title">O MNIE</h2>
         <div onclick="showContent('experience')" class="experience">
+            <button class="exit" aria-label="close">
+                <span aria-hidden="true">x</span>
+            </button>
             <h3 class="subtitle">DOŚWIADCZENIE</h3>
             <div class="toggle">
                 <p>Jestem certyfikowanym psychoterapeutą poznawczo-behawioralnym. Pracuję z dziećmi i młodzieżą oraz z
@@ -123,6 +132,9 @@
             </div>
         </div>
         <div onclick="showContent('certificate')" class="certificate">
+            <button class="exit" aria-label="close">
+                <span aria-hidden="true">x</span>
+            </button>
             <h3 class="subtitle">CERTYFIKAT</h3>
             <div></div>
         </div>
