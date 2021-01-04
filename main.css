@@ -176,6 +176,12 @@ a {
     display: none;
 }
 
+.certificate__display:hover {
+    color: #bca06b;
+}
+
+/*todo: solve pdf view on mobile devices*/
+
 .photo-container {
     height: 100%;
 }
@@ -199,14 +205,18 @@ a {
     font-weight: 500;
 }
 
+.sticky:hover {
+    color: #bca06b;
+}
+
 .sticky.fas {
     display: none;
 }
 
 footer {
-    margin: var(--primary-padding) auto 0 auto;
+    margin: var(--title-margins) auto 0 auto;
     border-top: solid 1px var(--primary-dark);
-    padding: 1em;
+    padding: var(--primary-padding);
     width: calc(100% - 6px);
     text-align: center;
     font-size: 12px;
@@ -305,19 +315,12 @@ footer {
         display: initial;
     }
 
-    .certificate.desktop .exit {
-        position: absolute;
-        top: var(--primary-padding);
-        right: var(--primary-padding);
-        display: initial;
-    }
-
     .therapy-desc {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
     }
-/*//*/
+
     .therapy-desc h2 {
         width: 100%;
     }
@@ -407,30 +410,6 @@ footer {
         display: block;
     }
 
-    .certificate.desktop {
-        position: fixed;
-        z-index: 10;
-        top: 0;
-        left: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transform: translateX(-50%);
-        border: none;
-        width: 100%;
-        max-width: 1400px;
-        padding-left: var(--primary-padding);
-        padding-right: var(--primary-padding);
-        height: 100%;
-        background-color: rgba(254, 246, 228, 0.97);
-        overflow-x: hidden;
-    }
-
-    .certificate.desktop h3 {
-        display: none;
-    }
-
-    /* todo: upload cert */
     .photo-wrapper {
         margin-top: var(--title-margins);
     }
