@@ -138,12 +138,24 @@ a {
     cursor: pointer;
 }
 
+.nav-menu-open:hover {
+    color: #bca06b;
+}
+
+.nav-menu-exit:hover {
+    color: #bca06b;
+}
+
 .nav-menu-exit.fas {
     display: none;
 }
 
 .nav__desktop-view {
     display: none;
+}
+
+.nav__desktop-view a:hover {
+    color: #bca06b;
 }
 
 .header {
@@ -222,6 +234,18 @@ footer {
     font-size: 12px;
 }
 
+@media only screen and (orientation:landscape) {
+    .header {
+        margin-top: 50px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .hero {
+        background-image: url("images/hero-mob.jpg");
+    }
+}
+
 @media only screen and (min-width: 1000px) {
     .header {
         margin-top: 150px;
@@ -250,10 +274,6 @@ footer {
         font-weight: 500;
     }
 
-    .nav__desktop-view a:hover {
-        color: #bca06b;
-    }
-
     .grid-container {
         grid-template-columns: calc(50% - 0.5em) calc(50% - 0.5em);
         grid-template-rows: 100vh repeat(4, auto);
@@ -278,6 +298,7 @@ footer {
     .subtitle:hover {
         color: #bca06b;
         border-color: #bca06b;
+        cursor: pointer;
     }
 
     .exit {

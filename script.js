@@ -20,12 +20,33 @@ function showScroll() {
     } else document.getElementById("sticky").style.display = "none";
 }
 
-function showContent(sectionName) {
-    const x = document.querySelector('.' + sectionName);
-    x.classList.toggle('desktop');
+function showTh1() {
+    const x = document.querySelector('.therapy1');
+    x.classList.add('desktop');
 }
 
-// function closeContent() {
-//     const x = document.getElementById('therapy1');
-//     x.classList.remove('desktop');
-// }
+function hideTh1() {
+    const x = document.querySelector('.therapy1');
+    x.classList.remove('desktop');
+}
+
+function showTh2() {
+    const x = document.querySelector('.therapy2');
+    x.classList.add('desktop');
+}
+
+function hideTh2() {
+    const x = document.querySelector('.therapy2');
+    x.classList.remove('desktop');
+}
+
+function showExp() {
+    const x = document.querySelector('.experience');
+    x.classList.add('desktop');
+}
+
+function hideExp() {
+    const x = document.querySelector('.experience');
+    x.classList.remove('desktop');
+}
+
