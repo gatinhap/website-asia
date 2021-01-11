@@ -139,34 +139,72 @@ a {
     position: absolute;
     top: 43px;
     right: 35px;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
+    margin-left: 2px;
+    margin-top: 13px;
+    width: 26px;
+    height: 4px;
     background-color: var(--primary-dark);
     cursor: pointer;
 }
 
-.nav-menu-open:hover {
-    background-color: #bca06b;
-}
-
-.nav-menu__bar {
-    display: block;
-    width: 24px;
+.nav-menu-open:before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 0;
+    width: 26px;
     height: 4px;
-    margin-bottom: 4px;
-    background-color: #cdccca;
+    background-color: var(--primary-dark);
 }
 
-.nav-menu-exit:hover, .nav__desktop-view a:hover, .certificate__display:hover, .sticky:hover, .phone:hover, .mail:hover {
+.nav-menu-open:after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 26px;
+    height: 4px;
+    background-color: var(--primary-dark);
+}
+
+.nav__desktop-view a:hover, .certificate__display:hover, .sticky:hover, .phone:hover, .mail:hover {
     color: #bca06b;
 }
 
-.nav-menu-exit.fas {
+.nav-menu-exit {
     display: none;
 }
 
+.nav-menu-exit {
+    position: absolute;
+    margin-top: 0;
+    margin-left: 0;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+}
 
+.nav-menu-exit:before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    width: 26px;
+    height: 4px;
+    background-color: var(--primary-dark);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.nav-menu-exit:after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    width: 26px;
+    height: 4px;
+    background-color: var(--primary-dark);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
 
 .nav__desktop-view {
     display: none;
@@ -219,18 +257,31 @@ a {
 .sticky-wrapper {
     position: fixed;
     z-index: 9;
-    bottom: 5px;
-    right: 5px;
+    bottom: 28px;
+    right: 28px;
 }
 
 .sticky {
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 3px;
+    width: 1px;
+    height: 16px;
+    background-color: var(--primary-dark);
     cursor: pointer;
-    font-size: 30px;
-    font-weight: 500;
 }
 
-.sticky.fas {
-    display: none;
+.sticky:before {
+    content: '';
+    position: absolute;
+    left: -5px;
+    top: 1px;
+    width: 10px;
+    height: 10px;
+    border-top: solid 1px var(--primary-dark);
+    border-right: solid 1px var(--primary-dark);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
 }
 
 footer {

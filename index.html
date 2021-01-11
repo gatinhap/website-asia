@@ -11,8 +11,6 @@
     <link rel="stylesheet" href="main.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="icon" href="images/favicon-32x32.png" sizes="32x32" type="image/png">
 </head>
 <body>
@@ -24,13 +22,8 @@
             <h2 class="header__subtitle"> mgr Joanna Purzycka<br>psychoterapeuta<br>psycholog</h2>
         </header>
         <div class="nav__mobile-view">
-            <div onclick="showNav()" class="nav-menu-open">
-                <span class="nav-menu__bar"></span>
-                <span class="nav-menu__bar"></span>
-                <span class="nav-menu__bar"></span>
-            </div>
-            <!--            <i onclick="showNav()" class="nav-menu-open fas fa-bars"></i>-->
-            <i onclick="hideNav()" class="nav-menu-exit fas fa-times"></i>
+            <div onclick="showNav()" class="nav-menu-open"></div>
+            <div onclick="hideNav()" class="nav-menu-exit"></div>
         </div>
         <nav class="nav__desktop-view">
             <a onclick="hideNav()" href="#oferta">OFERTA</a>
@@ -158,9 +151,7 @@
     </section>
 </main>
 <div onscroll="showScroll()" class="sticky-wrapper">
-    <div class="sticky-centered">
-        <a id="sticky" aria-label="Back to Top" href="#top" class="sticky fas fa-angle-up"></a>
-    </div>
+    <a id="sticky" aria-label="Back to Top" href="#top" class="sticky arrow-up icon"></a>
 </div>
 <footer>Made by <a href="https://github.com/gatinhap/website-joanna">Kotki</a></footer>
 <script src="script.js"></script>
