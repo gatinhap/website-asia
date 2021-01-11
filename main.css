@@ -14,7 +14,7 @@ body {
     margin: 0 auto;
     max-width: 1400px;
     line-height: 1.5;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato', sans-serif, Arial, Sans-Serif;
 }
 
 a {
@@ -95,6 +95,11 @@ a {
     grid-area: photo-wrapper;
 }
 
+.photo-container {
+    padding-top: calc(var(--title-margins) - 16px);
+    background-color: var(--primary-light);
+}
+
 .hero.responsive header {
     display: none;
 }
@@ -133,16 +138,27 @@ a {
 .nav-menu-open {
     position: absolute;
     top: 43px;
-    right: 1em;
-    font-size: 30px;
+    right: 35px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    background-color: var(--primary-dark);
     cursor: pointer;
 }
 
 .nav-menu-open:hover {
-    color: #bca06b;
+    background-color: #bca06b;
 }
 
-.nav-menu-exit:hover {
+.nav-menu__bar {
+    display: block;
+    width: 24px;
+    height: 4px;
+    margin-bottom: 4px;
+    background-color: #cdccca;
+}
+
+.nav-menu-exit:hover, .nav__desktop-view a:hover, .certificate__display:hover, .sticky:hover, .phone:hover, .mail:hover {
     color: #bca06b;
 }
 
@@ -150,12 +166,10 @@ a {
     display: none;
 }
 
+
+
 .nav__desktop-view {
     display: none;
-}
-
-.nav__desktop-view a:hover {
-    color: #bca06b;
 }
 
 .header {
@@ -177,22 +191,20 @@ a {
     font-weight: 600;
 }
 
-.subtitle {
+.subtitle, .subtitle__long {
     margin-top: 35px;
     letter-spacing: 1px;
     font-size: 16px;
     font-weight: 600;
 }
 
-.exit {
+.hide {
     display: none;
 }
 
-.certificate__display:hover {
-    color: #bca06b;
+.exit {
+    display: none;
 }
-
-/*todo: solve pdf view on mobile devices*/
 
 .photo-container {
     height: 100%;
@@ -217,10 +229,6 @@ a {
     font-weight: 500;
 }
 
-.sticky:hover {
-    color: #bca06b;
-}
-
 .sticky.fas {
     display: none;
 }
@@ -234,13 +242,13 @@ footer {
     font-size: 12px;
 }
 
-@media only screen and (orientation:landscape) {
+@media only screen and (orientation: landscape) {
     .header {
         margin-top: 50px;
     }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 440px) {
     .hero {
         background-image: url("images/hero-mob.jpg");
     }
@@ -292,10 +300,16 @@ footer {
     .subtitle {
         border: 1px solid var(--primary-dark);
         padding: var(--primary-padding);
-        text-align: center
+        text-align: center;
     }
 
-    .subtitle:hover {
+    .subtitle__long {
+        border: 1px solid var(--primary-dark);
+        padding: var(--primary-padding);
+        text-align: center;
+    }
+
+    .subtitle:hover, .subtitle__long:hover {
         color: #bca06b;
         border-color: #bca06b;
         cursor: pointer;
@@ -350,7 +364,7 @@ footer {
         width: calc(50% - 30px);
     }
 
-    .therapy1.desktop {
+    .therapy1.desktop, .experience.desktop, .therapy2.desktop {
         position: fixed;
         z-index: 10;
         top: 0;
@@ -377,50 +391,12 @@ footer {
         display: block;
     }
 
-    .therapy2.desktop {
-        position: fixed;
-        z-index: 10;
-        top: 0;
-        left: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transform: translateX(-50%);
-        border: none;
-        width: 100%;
-        max-width: 1400px;
-        padding-left: var(--primary-padding);
-        padding-right: var(--primary-padding);
-        height: 100%;
-        background-color: rgba(254, 246, 228, 0.97);
-        overflow-x: hidden;
-    }
-
     .therapy2.desktop h3 {
         display: none;
     }
 
     .therapy2.desktop .toggle {
         display: block;
-    }
-
-    .experience.desktop {
-        position: fixed;
-        z-index: 10;
-        top: 0;
-        left: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transform: translateX(-50%);
-        border: none;
-        width: 100%;
-        max-width: 1400px;
-        padding-left: var(--primary-padding);
-        padding-right: var(--primary-padding);
-        height: 100%;
-        background-color: rgba(254, 246, 228, 0.97);
-        overflow-x: hidden;
     }
 
     .experience.desktop h3 {
@@ -431,8 +407,17 @@ footer {
         display: block;
     }
 
+    .subtitle__long:hover + .hide {
+        display: block;
+        text-align: center;
+    }
+
     .photo-wrapper {
         margin-top: var(--title-margins);
+    }
+
+    .photo-container {
+        padding-top: 0;
     }
 
     footer {

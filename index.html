@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+    <meta name="description"
+          content="Psychoterapia indywidualna w nurcie poznawczo-behawioralnym oraz terapia schematu. Zapraszam na spotkanie.">
     <title>Psychoterapia Joanna Purzycka</title>
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="main.css">
@@ -10,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
           integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="icon" href="images/favicon-32x32.png" sizes="32x32" type="image/png">
 </head>
 <body>
 <a id="top"></a>
@@ -20,7 +24,12 @@
             <h2 class="header__subtitle"> mgr Joanna Purzycka<br>psychoterapeuta<br>psycholog</h2>
         </header>
         <div class="nav__mobile-view">
-            <i onclick="showNav()" class="nav-menu-open fas fa-bars"></i>
+            <div onclick="showNav()" class="nav-menu-open">
+                <span class="nav-menu__bar"></span>
+                <span class="nav-menu__bar"></span>
+                <span class="nav-menu__bar"></span>
+            </div>
+            <!--            <i onclick="showNav()" class="nav-menu-open fas fa-bars"></i>-->
             <i onclick="hideNav()" class="nav-menu-exit fas fa-times"></i>
         </div>
         <nav class="nav__desktop-view">
@@ -49,7 +58,7 @@
         <p>Cena za spotkanie online - 120 zł / 50 min.</p>
     </section>
     <section class="meet-me">
-       <h2 id="lokalizacja" class="title">SPOTKAJMY SIĘ</h2>
+        <h2 id="lokalizacja" class="title">SPOTKAJMY SIĘ</h2>
         <p>Obecnie prowadzę terapię w trybie online poprzez platformy <span class="bold">Zoom i Skype</span></p>
     </section>
     <section class="contact">
@@ -57,11 +66,12 @@
             <h2 id="kontakt" class="title">KONTAKT</h2>
             <p><span class="bold">mgr Joanna Purzycka, psycholog</span><br>certyfikowany psychoterapeuta
                 poznawczo-behawioralny</p>
-            <p>tel. <span class="bold">+48 600 907 696</span><br>e-mail: jpurzycka89@gmail.com</p>
+            <p>tel. <a href=tel:+48-600-907-696" class="phone bold">+48 600 907 696</a><br><a
+                    href="mailto:jpurzycka89@gmail.com" class="mail">jpurzycka89@gmail.com</a></p>
         </div>
     </section>
     <section class="therapy-desc">
-       <h2 id="terapia" class="title">OPIS TERAPII</h2>
+        <h2 id="terapia" class="title">OPIS TERAPII</h2>
         <div class="therapy1">
             <button onclick="hideTh1()" class="exit" aria-label="close">
                 <span aria-hidden="true">x</span>
@@ -132,18 +142,24 @@
             </div>
         </div>
         <div>
-            <h3 class="subtitle"><a class="certificate__display" href="images/cert1.pdf#toolbar=0">CERTYFIKAT</a></h3>
+            <h3 class="subtitle__long"><a class="certificate__display" href="images/certyfikat.pdf#toolbar=0"
+                                          target="_blank">SPRAWDŹ KWALIFIKACJE</a></h3>
+            <div class="hide">Certyfikat psychoterapeuty poznawczo-behawioralnego</div>
         </div>
     </section>
     <section class="photo-wrapper">
         <div class="photo-container">
-            <img class="photo" src="images/joannapurzycka.JPG" alt="Joanna Purzycka - zdjęcie">
+            <img class="photo"
+                 srcset="images/joannapurzycka-mob.jpg 440w, images/joannapurzycka.JPG 690w"
+                 sizes="(max-width: 440px) 440px, 690px"
+                 src="images/joannapurzycka.JPG"
+                 alt="Joanna Purzycka - zdjęcie">
         </div>
     </section>
 </main>
 <div onscroll="showScroll()" class="sticky-wrapper">
     <div class="sticky-centered">
-        <a id="sticky" href="#top" class="sticky fas fa-angle-up"></a>
+        <a id="sticky" aria-label="Back to Top" href="#top" class="sticky fas fa-angle-up"></a>
     </div>
 </div>
 <footer>Made by <a href="https://github.com/gatinhap/website-joanna">Kotki</a></footer>
