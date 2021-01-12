@@ -236,10 +236,6 @@ a {
     font-weight: 600;
 }
 
-.hide {
-    display: none;
-}
-
 .exit {
     display: none;
 }
@@ -252,6 +248,34 @@ a {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.tooltip {
+    position: relative;
+}
+
+.tooltip__text {
+    position: absolute;
+    z-index: 1;
+    bottom: 85%;
+    left: 50%;
+    display: inline-block;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.5s;
+    margin-left: -220px;
+    width: 440px;
+    padding: 4px 0;
+    font-size: 14px;
+    text-align: center;
+    background-color:var(--primary-dark);
+    color: var(--primary-light);
+    font-weight: 100;
+}
+
+.tooltip:hover .tooltip__text {
+    visibility: visible;
+    opacity: 0.75;
 }
 
 .sticky-wrapper {
@@ -302,6 +326,10 @@ footer {
 @media only screen and (max-width: 440px) {
     .hero {
         background-image: url("images/hero-mob.jpg");
+    }
+
+    .tooltip__text {
+        display: none;
     }
 }
 
