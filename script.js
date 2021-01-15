@@ -12,13 +12,24 @@ function hideNav() {
     element.classList.remove("responsive");
 }
 
-document.addEventListener("scroll", showScroll);
+const menuItems = document.querySelectorAll(".nav__desktop-view a");
 
-function showScroll() {
+menuItems.forEach(function(menuItem) {
+    menuItem.addEventListener("click", hideNav);
+});
+
+const exitMenu = document.querySelector('.nav-menu-exit');
+
+exitMenu.addEventListener("click", hideNav);
+
+
+function showArrow() {
     if (window.pageYOffset >= 200) {
         document.getElementById("sticky").style.display = "block";
     } else document.getElementById("sticky").style.display = "none";
 }
+
+document.addEventListener("scroll", showArrow);
 
 function showTh1() {
     const x = document.querySelector('.therapy1');

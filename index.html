@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
     <meta name="description"
-          content="Psychoterapia indywidualna w nurcie poznawczo-behawioralnym oraz terapia schematu. Zapraszam na spotkanie.">
+          content="Psychoterapia indywidualna w nurcie poznawczo-behawioralnym oraz terapia schematu. Zapraszam na stronę po więcej informacji. Spotkajmy się.">
     <title>Psychoterapia Joanna Purzycka</title>
     <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="main-m.css">
+    <link rel="stylesheet" href="main.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="icon" href="images/favicon-32x32.png" sizes="32x32" type="image/png">
@@ -23,14 +23,14 @@
         </header>
         <div class="nav__mobile-view">
             <div onclick="showNav()" class="nav-menu-open"></div>
-            <div onclick="hideNav()" class="nav-menu-exit"></div>
+            <div class="nav-menu-exit"></div>
         </div>
         <nav class="nav__desktop-view">
-            <a onclick="hideNav()" href="#oferta">OFERTA</a>
-            <a onclick="hideNav()" href="#lokalizacja">SPOTKAJMY SIĘ</a>
-            <a onclick="hideNav()" href="#kontakt">KONTAKT</a>
-            <a onclick="hideNav()" href="#terapia">OPIS TERAPII</a>
-            <a onclick="hideNav()" href="#o_mnie">O MNIE</a>
+            <a href="#oferta">OFERTA</a>
+            <a href="#lokalizacja">SPOTKAJMY SIĘ</a>
+            <a href="#kontakt">KONTAKT</a>
+            <a href="#terapia">OPIS TERAPII</a>
+            <a href="#o_mnie">O MNIE</a>
         </nav>
     </section>
     <section class="offer">
@@ -59,7 +59,7 @@
             <h2 id="kontakt" class="title">KONTAKT</h2>
             <p><span class="bold">mgr Joanna Purzycka, psycholog</span><br>certyfikowany psychoterapeuta
                 poznawczo-behawioralny</p>
-            <p>tel. <a href=tel:+48-600-907-696" class="phone bold">+48 600 907 696</a><br><a
+            <p>tel. <a href='tel:+48600907696' class="phone bold">+48 600 907 696</a><br><a
                     href="mailto:jpurzycka89@gmail.com" class="mail">jpurzycka89@gmail.com</a></p>
         </div>
     </section>
@@ -138,7 +138,7 @@
             <h3 class="subtitle__long tooltip">
                 <a class="certificate__display" href="images/certyfikat.pdf#toolbar=0" target="_blank">SPRAWDŹ
                     KWALIFIKACJE</a>
-                <span class="tooltip__text">Certyfikat psychoterapeuty poznawczo-behawioralnego</span>
+                <a class="tooltip__text" href="images/certyfikat.pdf#toolbar=0" target="_blank">Certyfikat psychoterapeuty poznawczo-behawioralnego.pdf</a>
             </h3>
         </div>
     </section>
@@ -147,15 +147,15 @@
             <img class="photo"
                  srcset="images/joannapurzycka-mob.jpg 440w, images/joannapurzycka.JPG 690w"
                  sizes="(max-width: 440px) 440px, 690px"
-                 src="images/joannapurzycka.JPG"
+                 src="images/joannapurzycka.JPG" loading="lazy"
                  alt="Joanna Purzycka - zdjęcie">
         </div>
     </section>
 </main>
-<div onscroll="showScroll()" class="sticky-wrapper">
+<div class="sticky-wrapper">
     <a id="sticky" aria-label="Back to Top" href="#top" class="sticky arrow-up icon"></a>
 </div>
-<footer>Made by <a href="https://github.com/gatinhap/website-joanna">Kotki</a></footer>
+<footer>Made with love by <a class="footer__content" href="https://github.com/gatinhap/website-joanna" target="_blank">Kotki</a></footer>
 <script src="script.js"></script>
 </body>
 </html>

@@ -167,7 +167,7 @@ a {
     background-color: var(--primary-dark);
 }
 
-.nav__desktop-view a:hover, .certificate__display:hover, .sticky:hover, .phone:hover, .mail:hover {
+.nav__desktop-view a:hover, .certificate__display:hover, .sticky:hover, .phone:hover, .mail:hover, .footer__content:hover {
     color: #bca06b;
 }
 
@@ -250,32 +250,11 @@ a {
     object-fit: cover;
 }
 
-.tooltip {
-    position: relative;
-}
-
 .tooltip__text {
-    position: absolute;
-    z-index: 1;
-    bottom: 85%;
-    left: 50%;
-    display: inline-block;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 1.5s;
-    margin-left: -220px;
-    width: 440px;
-    padding: 4px 0;
-    font-size: 14px;
-    text-align: center;
-    background-color:var(--primary-dark);
-    color: var(--primary-light);
-    font-weight: 100;
-}
-
-.tooltip:hover .tooltip__text {
-    visibility: visible;
-    opacity: 0.75;
+    display: block;
+    padding-top: 10px;
+    font-size: 16px;
+    font-weight: lighter;
 }
 
 .sticky-wrapper {
@@ -287,6 +266,7 @@ a {
 
 .sticky {
     position: absolute;
+    display: none;
     margin-left: 10px;
     margin-top: 3px;
     width: 1px;
@@ -326,10 +306,6 @@ footer {
 @media only screen and (max-width: 440px) {
     .hero {
         background-image: url("images/hero-mob.jpg");
-    }
-
-    .tooltip__text {
-        display: none;
     }
 }
 
@@ -484,6 +460,34 @@ footer {
 
     .experience.desktop .toggle {
         display: block;
+    }
+
+    .tooltip {
+        position: relative;
+    }
+
+    .tooltip__text {
+        position: absolute;
+        z-index: 1;
+        bottom: 85%;
+        left: 50%;
+        display: inline-block;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 1.5s;
+        margin-left: -220px;
+        width: 440px;
+        padding: 4px 0;
+        font-size: 14px;
+        text-align: center;
+        background-color:var(--primary-dark);
+        color: var(--primary-light);
+        font-weight: 100;
+    }
+
+    .tooltip:hover .tooltip__text {
+        visibility: visible;
+        opacity: 0.75;
     }
 
     .subtitle__long:hover + .hide {
