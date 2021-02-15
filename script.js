@@ -1,3 +1,15 @@
+function displayCookieMsg() {
+    document.getElementById('cc-container').style.opacity = '1';
+}
+
+const showCookie = window.addEventListener('DOMContentLoaded', displayCookieMsg);
+
+function hideCookieMsg() {
+    document.getElementById('cc-container').style.display = 'none';
+}
+
+const hideCookie = document.getElementById('agree').addEventListener("click", hideCookieMsg);
+
 function showNav() {
     const x = document.getElementById("hero");
     if (x.className === "hero") {
@@ -14,7 +26,7 @@ function hideNav() {
 
 const menuItems = document.querySelectorAll(".nav__desktop-view a");
 
-menuItems.forEach(function(menuItem) {
+menuItems.forEach(function (menuItem) {
     menuItem.addEventListener("click", hideNav);
 });
 
@@ -30,6 +42,18 @@ function showArrow() {
 }
 
 document.addEventListener("scroll", showArrow);
+
+//
+
+function showSection(section) {
+    let x = document.querySelector('.' + section);
+    x.classList.add('desktop');
+    return section;
+}
+
+const showTherapy1 = document.addEventListener("click", showSection(therapy1));
+
+//
 
 function showTh1() {
     const x = document.querySelector('.therapy1');

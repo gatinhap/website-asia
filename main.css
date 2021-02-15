@@ -22,12 +22,38 @@ a {
     color: inherit;
 }
 
-.cc-window {
-    font-family: 'Lato', sans-serif, Arial, Sans-Serif;
-}
-
 .bold {
     font-weight: 600;
+}
+
+.cc-container {
+    position: fixed;
+    z-index: 10;
+    top: var(--primary-padding);
+    left: var(--primary-padding);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    opacity: 0;
+    -webkit-transition: opacity 2s ease;
+    transition: opacity 1.5s ease;
+    padding: var(--primary-padding);
+    max-width: 345px;
+    background-color: var(--primary-light);
+}
+
+.cc-text {
+    margin-bottom: var(--primary-padding);
+}
+
+.cc-btn {
+    cursor: pointer;
+    outline: none;
+}
+
+.cc-text-link:focus {
+    outline: none;
 }
 
 .grid-container {
@@ -171,7 +197,7 @@ a {
     background-color: var(--primary-dark);
 }
 
-.nav__desktop-view a:hover, .certificate__display:hover, .sticky:hover, .phone:hover, .mail:hover, .footer__content:hover {
+.nav__desktop-view a:hover, .certificate__display:hover, .sticky:hover, .phone:hover, .mail:hover, .footer__content:hover, .cc-text-link:hover, .cc-btn:hover {
     color: #bca06b;
 }
 
@@ -301,35 +327,6 @@ footer {
     font-size: 12px;
 }
 
-.cookies {
-    z-index: 100;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: var(--primary-padding) 0 var(--primary-padding) 0;
-    background-color: var(--primary-light);
-
-}
-
-.cookies__text {
-    margin: 5px;
-    text-align: center;
-}
-
-.cookies__btn {
-    margin: 5px;
-    border: 1px solid var(--primary-dark);
-    padding: 5px;
-    width: 60px;
-    background-color: var(--primary-light);
-    color: var(--primary-dark);
-}
-
-.cookies__btn:focus {
-    outline: none;
-}
-
 @media only screen and (orientation: landscape) {
     .header {
         margin-top: 50px;
@@ -339,6 +336,21 @@ footer {
 @media only screen and (max-width: 440px) {
     .hero {
         background-image: url("images/hero_mob.png");
+    }
+
+    .cc-container {
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .cc-text {
+        margin-bottom: 0;
+
+    }
+
+    .cc-text-link {
+        color: #bca06b;
     }
 }
 
@@ -513,7 +525,7 @@ footer {
         padding: 4px 0;
         font-size: 14px;
         text-align: center;
-        background-color:var(--primary-dark);
+        background-color: var(--primary-dark);
         color: var(--primary-light);
         font-weight: 100;
     }

@@ -11,7 +11,6 @@
     <title>Psychoterapia Joanna Purzycka</title>
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="cookieconsent.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="icon" href="images/favicon-32x32.png" sizes="32x32" type="image/png">
@@ -29,6 +28,12 @@
     </script>
 </head>
 <body>
+<div id="cc-container" class="cc-container" role="dialog" aria-label="cookie consent">
+    <span class="cc-text">Ta strona korzysta z plików cookies Google. Korzystając z tej strony wyrażasz na to zgodę.
+        <a class="cc-text-link" aria-label="learn more about cookies" role="button" tabindex="0" target="_blank" href="https://policies.google.com/technologies/cookies?hl=pl">Dowiedz się więcej.</a>
+    </span>
+    <div id="agree" class="cc-btn" aria-label="dismiss cookie message" role="button" tabindex="0">Zgoda</div>
+</div>
 <a id="top"></a>
 <main class="grid-container">
     <section class="hero" id="hero">
@@ -174,28 +179,5 @@
 <footer>Made with love by <a class="footer__content" href="https://github.com/gatinhap/website-joanna" target="_blank">Kotki</a>
 </footer>
 <script src="script.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
-<script>
-    window.cookieconsent.initialise({
-        "palette": {
-            "popup": {
-                "background": "#fef6e4",
-                "text": "#271c19"
-            },
-            "button": {
-                "background": "#fef6e4",
-                "text": "#271c19"
-            }
-        },
-        "theme": "classic",
-        "position": "top-left",
-        "content": {
-            "message": "Ta strona korzysta z plików cookies Google. Korzystając z tej strony wyrażasz na to zgodę.",
-            "dismiss": "Zgoda",
-            "link": "Dowiedz się więcej.",
-            "href": "https://policies.google.com/technologies/cookies?hl=pl"
-        }
-    });
-</script>
 </body>
 </html>
