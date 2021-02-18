@@ -43,45 +43,14 @@ function showArrow() {
 
 document.addEventListener("scroll", showArrow);
 
-//
-
-function showSection(section) {
-    let x = document.querySelector('.' + section);
-    x.classList.add('desktop');
-    return section;
-}
-
-const showTherapy1 = document.addEventListener("click", showSection(therapy1));
-
-//
-
-function showTh1() {
-    const x = document.querySelector('.therapy1');
+function showSection(sectionName) {
+    let classToShow = sectionName.parentNode.className.split(" ")[0];
+    const x = document.querySelector('.'+classToShow);
     x.classList.add('desktop');
 }
 
-function hideTh1() {
-    const x = document.querySelector('.therapy1');
+function hideSection(sectionName) {
+    let classToShow = sectionName.parentNode.className.split(" ")[0];
+    const x = document.querySelector('.'+classToShow);
     x.classList.remove('desktop');
 }
-
-function showTh2() {
-    const x = document.querySelector('.therapy2');
-    x.classList.add('desktop');
-}
-
-function hideTh2() {
-    const x = document.querySelector('.therapy2');
-    x.classList.remove('desktop');
-}
-
-function showExp() {
-    const x = document.querySelector('.experience');
-    x.classList.add('desktop');
-}
-
-function hideExp() {
-    const x = document.querySelector('.experience');
-    x.classList.remove('desktop');
-}
-
