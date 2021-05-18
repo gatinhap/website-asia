@@ -197,7 +197,7 @@ a {
     background-color: var(--primary-dark);
 }
 
-.nav__desktop-view a:hover, .certificate__display:hover, .sticky:hover, .phone:hover, .mail:hover, .footer__content:hover, .cc-text-link:hover, .cc-btn:hover {
+.nav__desktop-view a:hover, .certificate__display:hover, .sticky:hover, .phone:hover, .mail:hover, .footer__content:hover, .cc-text-link:hover, .cc-btn:hover, .socratic:hover {
     color: #bca06b;
 }
 
